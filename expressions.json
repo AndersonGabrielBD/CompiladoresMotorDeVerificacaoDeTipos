@@ -1,0 +1,67 @@
+[
+  {
+    "description": "INT + INT (mesmo tipo)",
+    "expr": {
+      "op": "+",
+      "left":  {"type": "int", "value": 10},
+      "right": {"type": "int", "value": 5}
+    }
+  },
+  {
+    "description": "INT + FLOAT (coerção implícita)",
+    "expr": {
+      "op": "+",
+      "left":  {"type": "int",   "value": 3},
+      "right": {"type": "float", "value": 2.5}
+    }
+  },
+  {
+    "description": "Cast explícito FLOAT -> INT",
+    "expr": {
+      "op": "cast",
+      "to": "int",
+      "expr": {"type": "float", "value": 9.7}
+    }
+  },
+  {
+    "description": "Cast inválido STRING -> INT",
+    "expr": {
+      "op": "cast",
+      "to": "int",
+      "expr": {"type": "string", "value": "hello"}
+    }
+  },
+  {
+    "description": "Operação com variável da symbol table (x * 2)",
+    "vars": [{"name": "x", "type": "int", "value": 7}],
+    "expr": {
+      "op": "*",
+      "left":  {"var": "x"},
+      "right": {"type": "int", "value": 2}
+    }
+  },
+  {
+    "description": "Divisão por zero",
+    "expr": {
+      "op": "/",
+      "left":  {"type": "int", "value": 8},
+      "right": {"type": "int", "value": 0}
+    }
+  },
+  {
+    "description": "Concatenação STRING + STRING",
+    "expr": {
+      "op": "+",
+      "left":  {"type": "string", "value": "Hello, "},
+      "right": {"type": "string", "value": "World!"}
+    }
+  },
+  {
+    "description": "BOOL * FLOAT (coerção implícita)",
+    "expr": {
+      "op": "*",
+      "left":  {"type": "bool",  "value": true},
+      "right": {"type": "float", "value": 3.14}
+    }
+  }
+]

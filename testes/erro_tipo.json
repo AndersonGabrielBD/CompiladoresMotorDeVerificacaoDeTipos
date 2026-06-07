@@ -1,0 +1,5 @@
+{
+  "operacao": "+",
+  "esquerdo": { "tipo": "STRING", "valor": "Pedro" },
+  "direito": { "tipo": "BOOLEAN", "valor": "true" }
+}

@@ -1,0 +1,5 @@
+{
+  "operacao": "+",
+  "esquerdo": { "tipo": "INT", "valor": "10" },
+  "direito": { "tipo": "FLOAT", "valor": "5.5" }
+}
